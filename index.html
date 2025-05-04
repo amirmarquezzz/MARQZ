@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marqz - Tienda de Videojuegos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="Logo de Marqz" class="logo" />
+    <h1>Bienvenido a Marqz</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#conocenos">Conócenos</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Portada</h2>
+    <p>¡Tu tienda gamer en Tijuana!</p>
+  </section>
+
+  <section id="conocenos">
+    <h2>Conócenos</h2>
+    <p>Marqz es una tienda especializada en videojuegos, consolas y accesorios. Estamos ubicados en la colonia Hipódromo, Tijuana, Baja California.</p>
+    <img src="/amir.jpg" alt="Foto del dueño Amir Márquez" class="foto-dueno" />
+  </section>
+
+  <section id="productos">
+    <h2>Catálogo</h2>
+    <input type="text" placeholder="Buscar producto..." id="buscador" />
+    <div class="filtros">
+      <button onclick="filtrar('Todos')">Todos</button>
+      <button onclick="filtrar('PS5')">PS5</button>
+      <button onclick="filtrar('PS4')">PS4</button>
+      <button onclick="filtrar('Xbox')">Xbox</button>
+      <button onclick="filtrar('Switch')">Switch</button>
+    </div>
+    <div id="catalogo"></div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <div id="items-carrito"></div>
+    <p>Total: $<span id="total">0</span> MXN</p>
+    <button onclick="pagar()">Pagar con Stripe / Apple Pay</button>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Limpieza profesional de consolas</li>
+      <li>Reparación de controles</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Dirección: Col. Hipódromo, Tijuana, Baja California</p>
+    <p>Teléfono: 664-123-4567</p>
+    <p>Email: contacto@marqz.com</p>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo" required />
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <iframe src="https://www.google.com/maps?q=hipodromo+tijuana&output=embed" width="100%" height="300"></iframe>
+  </section>
+
+  <script src="app.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
